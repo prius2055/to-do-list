@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // const todoList = document.querySelector("todo-list");
   const todo = new Todos();
-  console.log(todo);
   const description = newTodoInput.value;
   if (description) {
     todo.addTodo(description);
@@ -30,3 +29,4 @@ document.addEventListener("DOMContentLoaded", () => {
     newTodoInput.value = "";
   });
 });
+
