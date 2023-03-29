@@ -137,11 +137,8 @@ npm i css-loader style-loader --save-dev
 
 ### Usage
 
-To run the project, execute the following command: npm test
-Example command:
-
 ```sh
-   GitHub Pages Server
+  npm install
 ```
 
 ### Run tests
@@ -149,12 +146,9 @@ Example command:
 To run tests, run the following command: npm test
 Example command:
 
-```sh
-  npx stylelint "**/*.{css,scss}" --fix
 ```
+npm run test
 
-```sh
-  npx eslint "**/*.js" --fix
 ```
 
 ### Deployment
