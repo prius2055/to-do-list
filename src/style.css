@@ -1,7 +1,12 @@
+body {
+  background-color: #ccc;
+}
+
 .todo-container {
-  border: 2px solid #ccc;
+  background-color: #ccc;
   max-width: 800px;
   margin: 50px auto;
+  box-shadow: -1px 2px 14px 4px rgba(0, 0, 0, 0.75);
 }
 
 .todo-header {
@@ -9,6 +14,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 2px 20px;
+  background-color: white;
+  margin-bottom: 3px;
 }
 
 .todo-header h1 {
@@ -21,16 +28,21 @@
 }
 
 .todo-input {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 8px 20px;
   display: flex;
   justify-content: space-between;
+  background-color: white;
+  margin-bottom: 3px;
 }
 
 .todo-input input {
   border: none;
   font-size: 30px;
   font-style: italic;
+}
+
+.todo-input input:focus {
+  outline: none;
 }
 
 .todo-input img {
@@ -42,20 +54,61 @@
   margin: 0;
 }
 
-.todos li {
+.todo-item {
+  background-color: white;
   display: flex;
   align-items: center;
   list-style: none;
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-left: 20px;
+  padding-left: 20px;
+  margin-bottom: 3px;
   position: relative;
   cursor: pointer;
 }
 
+.todo-description {
+  font-size: 30px;
+  border: none;
+  color: #555;
+  margin-left: 20px;
+  width: 100%;
+}
+
+.todo-description.active {
+  background-color: rgb(246, 200, 116);
+}
+
+.todo-description:focus {
+  outline: none;
+}
+
+.todo-item.active {
+  background-color: rgb(246, 200, 116);
+}
+
+.vertical-menu {
+  visibility: visible;
+}
+
+.vertical-menu.active {
+  visibility: hidden;
+}
+
+.todo-trash {
+  visibility: hidden;
+}
+
+.todo-trash.active {
+  visibility: visible;
+  cursor: pointer;
+}
+
 .todos .menu {
+  display: flex;
   position: absolute;
   right: 2%;
+  cursor: move;
 }
 
 .todos hr {
@@ -71,7 +124,7 @@
   color: #555;
 }
 
-.todos li p {
+.todos button p {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 30px;
