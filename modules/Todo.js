@@ -2,38 +2,51 @@ import Checkbox from '../src/img/maximize-button.png';
 import VerticalMenu from '../src/img/vertical-menu.png';
 import TrashCan from '../src/img/trash-can.png';
 
-export default class Todo {
-  constructor() {
-    this.todos = [];
-    this.description = '';
-    this.completed = false;
-    this.index = this.todos.length;
-    if (localStorage.getItem('todos')) {
-      this.todos = JSON.parse(localStorage.getItem('todos'));
-    }
+let todos;
+
+if (localStorage.getItem('todos')) {
+  todos = JSON.parse(localStorage.getItem('todos'));
+} else {
+  todos = [];
+}
+
+export const updateTodoIndex = () => {
+  todos.forEach((todo, i) => {
+    todo.index = i + 1;
+  });
+  localStorage.setItem('todos', JSON.stringify(todos));
+};
+
+export class Todos {
+  constructor(description, completed, index) {
+    // this.todos = [];
+    this.description = description;
+    this.completed = completed;
+    this.index = index;
+    // this.todos = [{ description, completed, index }];
   }
 
-  addTodo(description, completed, index) {
-    const newTodo = { description, completed, index };
-    this.todos.push(newTodo);
+  addTodo(description) {
+    const newTodo = { description, completed: false, index: todos.length };
+    todos.push(newTodo);
 
-    localStorage.setItem('todos', JSON.stringify(this.todos));
+    updateTodoIndex();
+
     this.displayTodo();
   }
 
   removeTodo(index) {
-    this.todos.splice(index, 1);
+    todos.splice(index, 1);
 
-    localStorage.setItem('todos', JSON.stringify(this.todos));
-
+    updateTodoIndex();
     this.displayTodo();
   }
 
   displayTodo() {
-    const todos = document.querySelector('.todos');
-    todos.innerHTML = '';
+    const todoElements = document.querySelector('.todos');
+    todoElements.innerHTML = '';
 
-    this.todos.forEach((todo, index) => {
+    todos.forEach((todo, index) => {
       const todoItem = document.createElement('div');
       todoItem.className = 'todo-item';
 
@@ -47,6 +60,20 @@ export default class Todo {
       todoDescription.type = 'text';
       todoDescription.className = 'todo-description';
       todoDescription.value = `${todo.description}`;
+
+
+///////////////////////////////////
+
+
+// `<div class='todo-item'>
+// <img scr='' alt=''/>
+// <input class='todo-list type='text' value='${todo.description}' />
+// `
+const t = document.querySelector('.todo-item')
+console.log(t)
+
+
+////////////////////////////////////
 
       const menuDiv = document.createElement('div');
       menuDiv.className = 'menu';
@@ -94,7 +121,9 @@ export default class Todo {
         todoDescription.setAttribute('readonly', 'readonly');
       });
 
-      todos.appendChild(todoItem);
+      todoElements.appendChild(todoItem);
     });
   }
 }
+
+

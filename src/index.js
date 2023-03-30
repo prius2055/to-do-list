@@ -1,4 +1,4 @@
-import Todos from '../modules/Todo.js';
+import { Todos, updateTodoIndex } from '../modules/Todo.js';
 import './style.css';
 import TurnLeft from './img/turn-left.png';
 
@@ -18,12 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
     description.value = '';
   }
   todo.displayTodo();
+  updateTodoIndex();
 
   newTodoInput.addEventListener('change', (e) => {
     e.preventDefault();
 
+    const description = e.target.value;
     const todo = new Todos();
-    todo.addTodo(e.target.value);
+    todo.addTodo(description);
     newTodoInput.value = '';
   });
 });
+
