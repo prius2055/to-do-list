@@ -19,11 +19,9 @@ export const updateTodoIndex = () => {
 
 export class Todos {
   constructor(description, completed, index) {
-    // this.todos = [];
     this.description = description;
     this.completed = completed;
     this.index = index;
-    // this.todos = [{ description, completed, index }];
   }
 
   addTodo(description) {
@@ -40,6 +38,11 @@ export class Todos {
 
     updateTodoIndex();
     this.displayTodo();
+  }
+
+  editTodo(todo, editedDescription) {
+    todo.description = editedDescription;
+    updateTodoIndex();
   }
 
   displayTodo() {
@@ -88,8 +91,14 @@ export class Todos {
         todoVerticalMenu.classList.add('active');
         todoTrash.classList.add('active');
 
+        //Edit to-do description
         todoDescription.removeAttribute('readonly');
         todoDescription.focus();
+        todoDescription.addEventListener('change', (e) => {
+          const editedDescription = e.target.value;
+          this.editTodo(todo, editedDescription);
+          updateTodoIndex();
+        });
 
         todoTrash.addEventListener('click', (e) => {
           e.preventDefault();
@@ -111,3 +120,4 @@ export class Todos {
     });
   }
 }
+
