@@ -17,6 +17,11 @@ export const updateTodoIndex = () => {
   localStorage.setItem('todos', JSON.stringify(todos));
 };
 
+const editTodo = (todo, editedDescription) => {
+  todo.description = editedDescription;
+  updateTodoIndex();
+};
+
 export class Todos {
   constructor(description, completed, index) {
     this.description = description;
@@ -38,11 +43,6 @@ export class Todos {
 
     updateTodoIndex();
     this.displayTodo();
-  }
-
-  editTodo(todo, editedDescription) {
-    todo.description = editedDescription;
-    updateTodoIndex();
   }
 
   displayTodo() {
@@ -91,12 +91,12 @@ export class Todos {
         todoVerticalMenu.classList.add('active');
         todoTrash.classList.add('active');
 
-        //Edit to-do description
+        // Edit to-do description
         todoDescription.removeAttribute('readonly');
         todoDescription.focus();
         todoDescription.addEventListener('change', (e) => {
           const editedDescription = e.target.value;
-          this.editTodo(todo, editedDescription);
+          editTodo(todo, editedDescription);
           updateTodoIndex();
         });
 
@@ -120,4 +120,3 @@ export class Todos {
     });
   }
 }
-
