@@ -29,4 +29,3 @@ document.addEventListener('DOMContentLoaded', () => {
     newTodoInput.value = '';
   });
 });
-

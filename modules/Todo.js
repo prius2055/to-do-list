@@ -61,20 +61,6 @@ export class Todos {
       todoDescription.className = 'todo-description';
       todoDescription.value = `${todo.description}`;
 
-
-///////////////////////////////////
-
-
-// `<div class='todo-item'>
-// <img scr='' alt=''/>
-// <input class='todo-list type='text' value='${todo.description}' />
-// `
-const t = document.querySelector('.todo-item')
-console.log(t)
-
-
-////////////////////////////////////
-
       const menuDiv = document.createElement('div');
       menuDiv.className = 'menu';
 
@@ -125,5 +111,3 @@ console.log(t)
     });
   }
 }
-
-
