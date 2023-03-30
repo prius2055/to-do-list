@@ -3,7 +3,7 @@
 <div align="center">
   <br/>
 
-  <h3><b>Awsome Books with ES6</b></h3>
+  <h3><b>To do List</b></h3>
 
 </div>
 
@@ -28,9 +28,9 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [Awsome Books] <a name="about-project"></a>
+# 📖 [To do List] <a name="about-project"></a>
 
-This is pair-programming based website related to the Awsome Book. You can add the list of your favourite books with their author name. And also you can remove any book by clicking on the remove button and it will give you the functionality of adding and removing the book from your personal Book list anytime when you desire to do that.
+This is a To-do-list. You can add a todo. And you can also remove and edit a an item from the list of to do items.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -64,12 +64,12 @@ This is pair-programming based website related to the Awsome Book. You can add t
  
 ### Key Features <a name="key-features"></a>
 
-- **[Usage of Dynamic desigin]**
 - **[Follow HTML, JS and CSS best practice]**
 - **[Checking for errors with linters]**
 - **[DOM Manipulation]**
-- **[Dynamically display list of todos]**
+- **[Dynamically display list of todo items]**
 - **[Usage of Js modules]**
+- **[Edit any to do item]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -137,11 +137,8 @@ npm i css-loader style-loader --save-dev
 
 ### Usage
 
-To run the project, execute the following command: npm test
-Example command:
-
 ```sh
-   GitHub Pages Server
+  npm install
 ```
 
 ### Run tests
@@ -149,12 +146,9 @@ Example command:
 To run tests, run the following command: npm test
 Example command:
 
-```sh
-  npx stylelint "**/*.{css,scss}" --fix
 ```
+npm run test
 
-```sh
-  npx eslint "**/*.js" --fix
 ```
 
 ### Deployment
@@ -179,7 +173,6 @@ GitHub Pages
 - [ ] **[More section inclusiveness]**
 - [ ] **[Desktop Responsivness]**
 - [ ] **[More stylings]**
-- [ ] **[Adding & Deleting todos]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -205,6 +198,6 @@ I would like to thank Microvers for this project!
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p
