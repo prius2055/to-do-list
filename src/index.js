@@ -5,7 +5,6 @@ import TurnLeft from './img/turn-left.png';
 document.addEventListener('DOMContentLoaded', () => {
   const todoInput = document.querySelector('.todo-input');
   const newTodoInput = document.querySelector('.new-todo-input');
- 
 
   const img = document.createElement('img');
   img.src = `${TurnLeft}`;

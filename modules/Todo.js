@@ -54,9 +54,8 @@ export class Todos {
     todos.forEach((todo, index) => {
       const todoItem = document.createElement('div');
       todoItem.className = 'todo-item';
-      // let isChecked = todo.completed;
 
-      //CREATE CHECKBOX
+      // CREATE CHECKBOX
       const todoCheckerButton = document.createElement('input');
       todoCheckerButton.setAttribute('type', 'checkbox');
       todoCheckerButton.className = 'checkbox';
@@ -126,10 +125,8 @@ export class Todos {
 
       todoElements.appendChild(todoItem);
 
-      //CHECK BOX INTERACTIVITY
+      // CHECK BOX INTERACTIVITY
       todoCheckerButton.addEventListener('click', () => {
-        // todo.completed = !todo.completed;
-        // todoCheckerButton.checked = !todo.completed
         MarkCompleted(todo);
         updateTodoIndex();
 
