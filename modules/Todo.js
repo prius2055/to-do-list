@@ -1,4 +1,5 @@
-import Checkbox from '../src/img/maximize-button.png';
+import MarkCompleted from './Functions.js';
+
 import VerticalMenu from '../src/img/vertical-menu.png';
 import TrashCan from '../src/img/trash-can.png';
 
@@ -46,22 +47,29 @@ export class Todos {
   }
 
   displayTodo() {
+    const footerParagraph = document.querySelector('.footer-paragraph');
     const todoElements = document.querySelector('.todos');
     todoElements.innerHTML = '';
 
     todos.forEach((todo, index) => {
       const todoItem = document.createElement('div');
       todoItem.className = 'todo-item';
+      // let isChecked = todo.completed;
 
-      const todoCheckerButton = document.createElement('img');
-      todoCheckerButton.setAttribute('src', `${Checkbox}`);
-      todoCheckerButton.setAttribute('alt', 'checkbox');
+      //CREATE CHECKBOX
+      const todoCheckerButton = document.createElement('input');
+      todoCheckerButton.setAttribute('type', 'checkbox');
+      todoCheckerButton.className = 'checkbox';
+      todoCheckerButton.checked = todo.completed;
 
       const todoDescription = document.createElement('input');
-      todoDescription.className = 'todo-list';
       todoDescription.setAttribute('readonly', 'readonly');
       todoDescription.type = 'text';
-      todoDescription.className = 'todo-description';
+      todoDescription.className = `${
+        !todo.completed
+          ? 'todo-description'
+          : 'todo-description mark-description'
+      }`;
       todoDescription.value = `${todo.description}`;
 
       const menuDiv = document.createElement('div');
@@ -117,6 +125,32 @@ export class Todos {
       });
 
       todoElements.appendChild(todoItem);
+
+      //CHECK BOX INTERACTIVITY
+      todoCheckerButton.addEventListener('click', () => {
+        // todo.completed = !todo.completed;
+        // todoCheckerButton.checked = !todo.completed
+        MarkCompleted(todo);
+        updateTodoIndex();
+
+        todoDescription.className = `${
+          !todo.completed
+            ? 'todo-description'
+            : 'todo-description mark-description'
+        }`;
+
+        todoDescription.classList.add('active');
+      });
     });
+
+    footerParagraph.addEventListener('click', () => {
+      this.filteredTodos(todos);
+    });
+  }
+
+  filteredTodos() {
+    todos = todos.filter((todo) => !todo.completed);
+    updateTodoIndex();
+    this.displayTodo();
   }
 }
