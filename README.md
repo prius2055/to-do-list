@@ -180,7 +180,7 @@ GitHub Pages
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [https://github.com/emhamza/My-portfolio-site](../../issues/).
+Feel free to check the [https://github.com/prius2055/to-do-list]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
