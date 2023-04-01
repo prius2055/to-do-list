@@ -75,7 +75,8 @@ This is a To-do-list. You can add a todo. And you can also remove and edit a an 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- The Live Demo link will be available soon!
+-[Live demo](https://prius2055.github.io/to-do-list/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -180,7 +181,7 @@ GitHub Pages
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [https://github.com/prius2055/to-do-list]
+Feel free to check the [Repository](https://github.com/prius2055/to-do-list)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

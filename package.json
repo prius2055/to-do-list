@@ -6,12 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode development",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "homepage": "https://prius2055.github.io/to-do-list",
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "webpack": "^5.76.3",
     "webpack-cli": "^5.0.1"
   },
