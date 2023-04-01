@@ -72,11 +72,15 @@ body {
   border: none;
   color: #555;
   margin-left: 20px;
-  width: 100%;
+  width: 80%;
 }
 
 .todo-description.active {
   background-color: rgb(246, 200, 116);
+}
+
+.mark-description {
+  text-decoration: line-through;
 }
 
 .todo-description:focus {
@@ -131,9 +135,28 @@ body {
   margin-left: 10px;
 }
 
-.todo-action {
-  font-size: 30px;
+.todo-footer {
   background-color: #ccc;
-  text-align: center;
+}
+
+.footer-paragraph {
   cursor: pointer;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #555;
+}
+
+.checkbox {
+  width: 30px;
+  height: 30px;
+  border: 2px solid red;
+  background-color: red;
+}
+
+.checkbox.active {
+  background-color: rgb(246, 200, 116);
 }
