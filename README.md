@@ -68,14 +68,17 @@ This is a To-do-list. You can add a todo. And you can also remove and edit a an 
 - **[Checking for errors with linters]**
 - **[DOM Manipulation]**
 - **[Dynamically display list of todo items]**
+- **[Edit any item in the list of todos]**
+- **[Mark completed items in the to-do list]**
+- **[Delete all completed items from te to-do list]**
 - **[Usage of Js modules]**
-- **[Edit any to do item]**
+- **[Store all operation in local storge and update accordingly]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
--[Live demo](https://prius2055.github.io/to-do-list/)
+- Use this [Live demo] link to checkout the app. (https://prius2055.github.io/to-do-list/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
