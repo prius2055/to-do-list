@@ -78,7 +78,7 @@ This is a To-do-list. You can add a todo. And you can also remove and edit a an 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Use this [Live demo] link to checkout the app. (https://prius2055.github.io/to-do-list/)
+- Use this link [Live demo](https://prius2055.github.io/to-do-list/) to checkout the app.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
