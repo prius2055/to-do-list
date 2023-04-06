@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1680792783040" clover="3.2.0">
-  <project timestamp="1680792783040" name="All files">
-    <metrics statements="12" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="3" elements="17" coveredelements="12" complexity="0" loc="12" ncloc="12" packages="1" files="1" classes="1"/>
-    <file name="Todos.js" path="C:\Users\USER\Documents\web material\microverse\to-do-list\modules\Todos.js">
-      <metrics statements="12" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="3"/>
+<coverage generated="1680793894428" clover="3.2.0">
+  <project timestamp="1680793894428" name="All files">
+    <metrics statements="11" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="3" elements="16" coveredelements="11" complexity="0" loc="11" ncloc="11" packages="1" files="1" classes="1"/>
+    <file name="Todos.js" path="C:\Users\user\Desktop\to-do-list\modules\Todos.js">
+      <metrics statements="11" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="3"/>
       <line num="3" count="2" type="stmt"/>
       <line num="4" count="2" type="stmt"/>
       <line num="5" count="2" type="stmt"/>
       <line num="9" count="1" type="stmt"/>
       <line num="10" count="1" type="stmt"/>
-      <line num="12" count="1" type="stmt"/>
-      <line num="13" count="1" type="stmt"/>
-      <line num="17" count="1" type="stmt"/>
-      <line num="18" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="21" count="0" type="stmt"/>
       <line num="22" count="0" type="stmt"/>
-      <line num="23" count="0" type="stmt"/>
-      <line num="24" count="0" type="stmt"/>
     </file>
   </project>
 </coverage>
