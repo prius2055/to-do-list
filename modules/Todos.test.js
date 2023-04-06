@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import Todos from './Todos';
+import Todos from './Todos.js';
 
 describe('todos', () => {
   test('Adding a new item to the list', () => {
@@ -21,6 +21,4 @@ describe('todos', () => {
       { description: 'church', completed: false, index: 0 },
     ]);
   });
-
-  
 });

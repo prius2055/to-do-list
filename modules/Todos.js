@@ -5,20 +5,18 @@ export default class Todos {
     this.index = index;
   }
 
+  // ADD AN ITEM
   addTodo(todos, description) {
     const newTodo = { description, completed: false, index: todos.length };
-    todos.push(newTodo);
+    this.todos = todos;
+    this.todos.push(newTodo);
     localStorage.setItem('todos', JSON.stringify(todos));
   }
 
+  // REMOVE AN ITEM
   removeTodo(todos, index) {
-    todos.splice(index, 1);
+    this.todos = todos;
+    this.todos.splice(index, 1);
     localStorage.setItem('todos', JSON.stringify(todos));
-  }
-
-  filteredTodos() {
-    todos = todos.filter((todo) => !todo.completed);
-    updateTodoIndex();
-    this.displayTodo();
   }
 }

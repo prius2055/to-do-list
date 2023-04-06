@@ -1,17 +1,9 @@
 import MarkCompleted from './Functions.js';
-import Todos from './Todos.js'
+import Todos from './Todos.js';
 import VerticalMenu from '../src/img/vertical-menu.png';
 import TrashCan from '../src/img/trash-can.png';
 
-let todos;
-
-if (localStorage.getItem('todos')) {
-  todos = JSON.parse(localStorage.getItem('todos'));
-} else {
-  todos = [];
-}
-
-export const updateTodoIndex = () => {
+export const updateTodoIndex = (todos) => {
   todos.forEach((todo, i) => {
     todo.index = i + 1;
   });
@@ -23,7 +15,7 @@ const editTodo = (todo, editedDescription) => {
   updateTodoIndex();
 };
 
-export const displayTodo = () => {
+export const displayTodo = (todos) => {
   const footerParagraph = document.querySelector('.footer-paragraph');
   const todoElements = document.querySelector('.todos');
   todoElements.innerHTML = '';
@@ -82,13 +74,13 @@ export const displayTodo = () => {
         updateTodoIndex();
       });
 
-      //DELETE TODOS
+      // DELETE TODOS
       todoTrash.addEventListener('click', (e) => {
         e.preventDefault();
-        const todo = new Todos
-        removeTodo(index);
-        updateTodoIndex();
-        displayTodo();
+        const todo = new Todos();
+        todo.removeTodo(todos, index);
+        updateTodoIndex(todos);
+        displayTodo(todos);
       });
     });
 
@@ -107,7 +99,7 @@ export const displayTodo = () => {
     // CHECK BOX INTERACTIVITY
     todoCheckerButton.addEventListener('click', () => {
       MarkCompleted(todo);
-      updateTodoIndex();
+      updateTodoIndex(todos);
 
       todoDescription.className = `${
         !todo.completed
@@ -120,6 +112,8 @@ export const displayTodo = () => {
   });
 
   footerParagraph.addEventListener('click', () => {
-    this.filteredTodos(todos);
+    const filterTodos = todos.filter((todo) => !todo.completed);
+    updateTodoIndex(filterTodos);
+    displayTodo(filterTodos);
   });
 };
