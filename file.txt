@@ -1,5 +1,0 @@
-$ npm i jest-environment-jsdom
-
-/**
- * @jest-environment jsdom
- */
