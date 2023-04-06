@@ -4,6 +4,7 @@ import './style.css';
 import TurnLeft from './img/turn-left.png';
 
 document.addEventListener('DOMContentLoaded', () => {
+
   const todoInput = document.querySelector('.todo-input');
   const newTodoInput = document.querySelector('.new-todo-input');
 
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const todo = new Todos();
   const description = newTodoInput.value;
   if (description) {
-    todo.addTodo(description);
+    todo.addTodo(todos, description);
     updateTodoIndex();
     todo.displayTodo();
     description.value = '';
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const todo = new Todos();
     todo.addTodo(description);
     updateTodoIndex();
-    todo.displayTodo();
+    displayTodo();
     newTodoInput.value = '';
   });
 });

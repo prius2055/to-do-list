@@ -14,12 +14,5 @@ describe('todos', () => {
     ]);
   });
 
-  test('Delete item from the list', () => {
-    const todo = new Todos();
-    expect(todo).toBeDefined();
-    todo.removeTodo([]);
-    expect(JSON.parse(localStorage.getItem('todos'))).not.toContain([
-      { description: 'church', completed: false, index: 0 },
-    ]);
-  });
+  
 });

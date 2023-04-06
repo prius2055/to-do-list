@@ -7,7 +7,7 @@ export default class Todos {
 
   addTodo(todos, description) {
     const newTodo = { description, completed: false, index: todos.length };
-
+    console.log(todos);
     // const newTodo = { description, completed: false };
     todos.push(newTodo);
     localStorage.setItem('todos', JSON.stringify(todos));
