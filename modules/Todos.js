@@ -19,16 +19,20 @@ export default class Todos {
     this.todos.splice(index, 1);
     localStorage.setItem('todos', JSON.stringify(todos));
   }
-  MarkCompleted = (todos,description,value) => {
-    const newTodo = { description, completed: value, index:0 };
+
+  // To check whether the item is checked or not
+  MarkCompleted = (todos, description, value) => {
+    const newTodo = { description, completed: value, index: 0 };
     this.todos = todos;
     this.todos.push(newTodo);
-    localStorage.setItem('todos', JSON.stringify(todos)); 
+    localStorage.setItem('todos', JSON.stringify(todos));
   };
-  // clearAllCompleted = (index,value)=>{
-  //   this.array = [{description:'John',completed:false,index:0},{description:'Mike',completed:false,index:1},{description:'Johnny Sins',completed:false,index:2}]
-  //   this.array[index].completed = value;
-  //   let newarr = this.array.filter((todo)=>!todo.completed);
-  //   localStorage.setItem('todos', JSON.stringify(newarr));
-  // }
+
+  // To clear all completed
+  clearAllCompleted = (index, value) => {
+    const array = [{ description: 'John', completed: false, index: 0 }, { description: 'Mike', completed: false, index: 1 }, { description: 'Johnny Sins', completed: false, index: 2 }];
+    array[index].completed = value;
+    const newarr = array.filter((todo) => !todo.completed);
+    localStorage.setItem('todos', JSON.stringify(newarr));
+  }
 }
