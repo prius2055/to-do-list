@@ -35,4 +35,11 @@ export default class Todos {
     const newarr = array.filter((todo) => !todo.completed);
     localStorage.setItem('todos', JSON.stringify(newarr));
   }
+
+  // To edit the existing task
+  editTask = (editText, index) => {
+    const array = [{ description: 'John', completed: false, index: 0 }, { description: 'Mike', completed: false, index: 1 }, { description: 'Johnny Sins', completed: false, index: 2 }];
+    array[index].description = editText;
+    localStorage.setItem('todos', JSON.stringify(array));
+  }
 }

@@ -33,4 +33,9 @@ describe('todos', () => {
     todo.clearAllCompleted(2, true);
     expect(JSON.parse(localStorage.getItem('todos'))).toEqual([{ description: 'John', completed: false, index: 0 }, { description: 'Mike', completed: false, index: 1 }]);
   });
+  test('Edit the tasks', () => {
+    const todo = new Todos();
+    todo.editTask('Mia Malkova', 0);
+    expect(JSON.parse(localStorage.getItem('todos'))).toEqual([{ description: 'Mia Malkova', completed: false, index: 0 }, { description: 'Mike', completed: false, index: 1 }, { description: 'Johnny Sins', completed: false, index: 2 }]);
+  });
 });
