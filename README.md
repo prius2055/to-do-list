@@ -39,6 +39,8 @@ This is a To-do-list. You can add a todo. And you can also remove and edit a an 
 -DOM Manipulation
 -ES6
 -Webpack
+-Jest
+-Linters
 
 ### Tech Stack <a name="tech-stack"></a>
 
